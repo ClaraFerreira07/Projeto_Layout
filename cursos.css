@@ -1,3 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
 body{
-    background-color: #f3f2f1;
+    background-color: #f3f2f1;  
+    font-family: Arial, sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 160%;
+    align-items:center;
+}
+h3{
+    line-height: 170%;
+    color: #0837A7;
+}
+p{
+    line-height: 140%;
 }
