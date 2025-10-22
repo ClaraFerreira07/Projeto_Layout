@@ -20,47 +20,97 @@ body {
     width: auto;
     height: auto;
     font-size: 26px;
-    color:#f3f2f1 ;
-}
-.menu {
-background-color: #A70808;
-padding: 10px 0;
+    color: #f3f2f1;
 }
 
-.menu ul {
-list-style: none;
-display: flex;
-justify-content: center;
+#menu-toggle {
+    display: none;
 }
 
-.menu ul li {
-margin: 0 15px;
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.menu ul li a {
-text-decoration: none;
-color: #f3f2f1;
-font-size: 18px;
-padding: 10px 15px;
-transition: background-color 0.3s ease;
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #1a2041;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-.menu ul li a:hover {
-background-color: #555;
-border-radius: 5px;
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #a70808;
+    color: #f3f2f1;
+    transition: left 0.3 ease;
+    padding-top: 60px;
+    z-index: 1001;
 }
 
-@media (max-width: 768px) {
-.menu ul {
-flex-direction: column;
-align-items: center;
+.slide-menu ul,
+li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(225, 255, 225, 0.2);
 }
 
-.menu ul li {
-margin-bottom: 10px;
+.slide-menu ul,
+li:hover {
+    background: rgba(225, 255, 225, 0.1);
+    cursor: pointer;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: none 0.3s ease;
+    z-index: 1000;
 }
-#frase{
+
+#menu-toggle:checked~.slide-menu {
+    left: 0;
+}
+
+#menu-toggle:checked~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#menu-toggle:checked+.menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translateY(13px);
+    background: #f3f2f1;
+}
+
+#menu-toggle:checked+.menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+.menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-13px);
+    background: #f3f2f1;
+}
+
+#frase {
     text-align: center;
     margin: 10px 0 35px 100px;
     padding: 3px;
@@ -70,12 +120,14 @@ margin-bottom: 10px;
     border: transparent 1px cadetblue;
     background-color: aqua;
 }
-.noticia{
+
+.noticia {
     height: 750px;
     width: 1350px;
     background-color: #555;
 }
-#pla{
+
+#pla {
     text-align: center;
     font-size: 36px;
     height: 65px;
