@@ -7,6 +7,29 @@
 body {
     background-color: #f3f2f1;
     font-family: Arial, sans-serif;
+    background-image: url("../../WhatsApp Image 2025-10-26 at 14.01.03.jpeg" );
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+}
+
+.texto-inicial{
+    color: #f3f2f1;
+    font-size: 30px;
+    font-family: sans-serif;
+    max-width: 450px;
+    width: 100%;
+    background-color: #970808;
+    padding: 100px;
+    padding-bottom: 3px;
+    padding-left: 90px;
+}
+
+#red{
+    padding: 30px;
+    background-color: #0b2a6d;
+    line-height: 200px;
+    padding-left: 100px;
+    margin-block: 5px solid black;
 }
 
 
@@ -106,6 +129,10 @@ a{
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,12 +166,6 @@ header{
     width: 345px;
     border: transparent 1px cadetblue;
     background-color: aqua;
-}
-
-.noticia {
-    height: 750px;
-    width: 1350px;
-    background-color: #555;
 }
 
 #pla {
