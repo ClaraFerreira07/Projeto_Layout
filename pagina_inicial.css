@@ -29,7 +29,7 @@ body {
     background-color: #0b2a6d;
     line-height: 200px;
     padding-left: 100px;
-    margin-block: 5px solid black;
+    box-shadow: 10px -10px black;
 }
 
 
@@ -157,21 +157,25 @@ header{
     z-index: 10;
 }
 
-#frase {
-    text-align: center;
-    margin: 10px 0 35px 100px;
-    padding: 3px;
-    font-size: 36;
-    height: 70px;
-    width: 345px;
-    border: transparent 1px cadetblue;
-    background-color: aqua;
-}
-
 #pla {
-    text-align: center;
+    text-align: left;
     font-size: 36px;
     height: 65px;
     width: 150px;
-    margin: 10px 15px 15px 195px;
+    margin: 10px 15px 20px 100px;
+    text-decoration-line: underline;
+    text-decoration-color: #a70808;
+}
+
+.imagem{
+    color: #f3f2f1;
+    font-size: 30px;
+    font-family: sans-serif;
+    max-width: 450px;
+    width: 100%;
+    background-color: #970808;
+    padding: 100px;
+    padding-bottom: 3px;
+    padding-left: 90px;
+    
 }
